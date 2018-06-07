@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rich Dad's Cashflow Quadrant</title>
+</head>
+<style>
+  .body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .color-cyan {
+    color: #ff00ff;
+  }
+
+  .color-red {
+    color: #ff1f4b;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  quotes {
+    font-style: italic;
+  }
+
+  quotes::after,
+  quotes::before {
+    content: '"';
+  }
+
+  .header {
+    background-color: #FF1F4B;
+    color: white;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .header h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    background-color: #37549E;
+    color: #E7F6F6;
+    padding: 1rem 2rem;
+  }
+
+  .section-title h2 {
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .description {
+    background-color: white;
+    border: 1px solid lightgray;
+    margin: 1rem 0;
+    padding: 1rem 0;
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .align-item-center {
+    align-items: center;
+  }
+
+  .justify-content-center {
+    justify-content: center;
+  }
+
+  .align-item-stretch {
+    align-items: stretch;
+  }
+
+  .product-detail-image {
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .product-detail-image img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+  }
+
+  .product-detail-description {
+    background-color: #e7f6f6;
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .product-detail-title {
+    color: #ff1f4b;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .product-detail-table {
+    background-color: #e7f6f6;
+    box-sizing: border-box;
+    min-height: 150px;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .product-detail-table tr td {
+    font-size: .9rem;
+    line-height: 1.25rem;
+    padding-left: 1rem;
+  }
+
+  .product-detail p,
+  .product-detail li {
+    /* color: darkgray; */
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .product-detail h3 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+  }
+
+  .product-detail-table tr td:first-child {
+    font-weight: 700;
+    min-width: 150px;
+  }
+
+  @media (max-width: 767px) {
+    .order-one {
+      order: 1;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .description {
+      background-color: white;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .product-detail-image {
+      width: 50%;
+    }
+    .product-detail-description {
+      padding: 1rem 3rem;
+      width: 50%;
+    }
+    .product-detail p,
+    .product-detail li {
+      font-size: 1rem;
+    }
+    .product-detail-table {
+      width: 49.5%;
+    }
+    .product-detail-table:first-child {
+      margin-right: .5%;
+    }
+    .product-detail-table:last-child {
+      margin-left: .5%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .product-detail-image {
+      width: 30%;
+    }
+    .product-detail-description {
+      width: 70%;
+    }
+    .product-detail p,
+    .product-detail li {
+      font-size: 1.3rem;
+    }
+  }
+
+  .product-detail-description-fullwidth {
+    width: 100%;
+  }
+
+  .terminos {
+    background-color: #37549E;
+    color: white;
+    padding: 1rem 2rem;
+  }
+
+  .terminos .product-detail-title {
+    color: #E7F6F6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .terminos ul {
+    color: #E7F6F6;
+    list-style-type: circle;
+  }
+
+  .terminos li {
+    line-height: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .terminos ul {
+      margin-left: 2rem;
+    }
+  }
+
+  .footer {
+    background-color: #373737;
+  }
+
+  .footer-item {
+    color: white;
+    box-sizing: border-box;
+  }
+
+  .footer-item a {
+    color: white;
+    display: block;
+    font-size: 80%;
+    padding: .5rem;
+    text-decoration: none;
+  }
+
+  .footer-item a:hover {
+    background-color: #626262;
+    color: #E7F6F6;
+  }
+</style>
+
+<body class="body">
+  <main class="main">
+    <header class="header">
+      <hgroup>
+        <h1>
+          Violin 1/16 Nobre
+        </h1>
+        <h2>
+          for Children With Case, Resin and Bow...
+        </h2>
+      </hgroup>
+    </header>
+
+    <section>
+      <div class="section-title">
+        <h2>Description</h2>
+      </div>
+
+      <div class="description product-detail">
+        <div class="container align-item-center">
+          <div class="product-detail-description product-detail-description-fullwidth">
+            <h2 class="product-detail-title">
+              Violin 1/16 Nobre for Children With Case, Resin and Bow...
+            </h2>
+            <h3>Product Overview</h3>
+
+            <p>
+              Nobre musical instruments have been characterized as being of interest to aspiring people in the great world of music, giving it great value for its affordable prices.
+              <br>
+              Nobre violins are products designed for students and intermediates, they are characterized by having a good sound and comfort.
+              <br>
+              The Nobre violins are made of fir tree in the upper body, maple for the lower part and a rosewood fretboard.
+            </p>
+            <h3>Specifications</h3>
+            <ul>
+              <li><strong>Model:</strong> Nobre violin</li>
+              <li><strong>Color:</strong> Natural satin</li>
+              <li><strong>Upper body:</strong> fir</li>
+              <li><strong>Lower body:</strong> maple</li>
+              <li><strong>Mast material:</strong> palo rosa</li>
+              <li><strong>Fingerboard:</strong> rosewood</li>
+              <li><strong>Tamaño:</strong> 1/16</li>
+              <li><strong>Accesorios incluidos:</strong> arco y forro</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h2>Payment</h2>
+      </div>
+      <div class="description product-detail">
+        <div class="container align-item-center">
+          <div class="product-detail-description order-one">
+            <p class="text-right">
+              <em class="color-cyan">
+                We accept PayPal Only. All major credit cards are accepted through secure payment processor PayPal.
+              </em>
+            </p>
+          </div>
+          <div class="product-detail-image">
+            <img src="https://raw.githubusercontent.com/alexballera/ebay-template/master/images/Rich-Dad-Cashflow-Quadrant-Guide-to-Financial-Freedom.png"
+              alt="Rich Dad Cashflow Quadrant Guide to Financial Freedom">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h2>Shipping</h2>
+      </div>
+      <div class="description product-detail">
+        <div class="container align-item-center">
+          <div class="product-detail-description product-detail-description-fullwidth">
+            <h2 class="product-detail-title">PLEASE READ!!!</h2>
+            <p>Feel Safe to Buy with Us read our Feedback is our business!!!</p>
+            <p>
+              <strong class="color-cyan">WEEKEND CLOSED!</strong>
+            </p>
+            <p>
+              Shipping out in next business day if you choose on weekend
+            </p>
+            <p>
+              ALASKA / HAWAII / PUERTO RICO / P.O BOX
+              <strong class="color-cyan">IS NOT AVAILABLE!!!!!</strong>
+            </p>
+            <h2>SHIPPING BY <strong class="color-red">FedEx</strong></h2>
+            <p>
+              It usually takes 3 days of handling time. For orders within the US it takes 7 business days maximum after handling and for
+              orders outside the US it takes 13 business days maximum.
+            </p>
+            <p>
+              When can you expect your order? Allow at least 2 to 3 days for tracking number to post.
+            </p>
+            <p>
+              When I know, you will know.
+            </p>
+            <p>
+              If you want cancel order we can do only before shipping...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="terminos">
+      <h2 class="product-detail-title">
+        Purchase Terms and Conditions
+      </h2>
+      <ul>
+        <li>
+          Your order will be processed within 3 business day after receipt of cleared payment.
+        </li>
+        <li>
+          We Only Provide Shipping to the 48 Contiguous United States.
+        </li>
+        <li>
+          We are unable to ship PO Box.
+        </li>
+        <li>
+          We do not combine shipping.
+        </li>
+        <li>
+          30 days in order to get your money back or item exchange*, buyer pays return shipping.
+        </li>
+        <li>
+          Buyers Pay for Return Shipping Cost.
+        </li>
+        <li>
+          All emails will be answered within 1 business day. If you do not receive our reply, please kindly re-sent your e-mail, and
+          we will reply to you as soon as possible.
+        </li>
+        <li>
+          All items sold by us are being described to the best of our abilities, as accurate as possible, and with utmost conscientiousness
+          on our part. However, to avoid any potential oversights, I respectfully request your assistance in helping us to
+          make this a mutually satisfactory transaction by Thoroughly reviewing item description and photos, and asking all
+          questions Prior To Bidding.
+        </li>
+        <li>
+          Please Note that size and color representation are subject to manufacturing variance and may not be exact. Also note that
+          monitor settings may vary from computer to computer and may distort actual colors.
+        </li>
+        <li>
+          Before you report any problem to Ebay wait for our answer.
+        </li>
+        <li>
+          If there is something let you unsatisfy, please do not leave negative or neutral feedback we will try best to solve your
+          problem and ensure your requirement.
+        </li>
+        <li>
+          Please leave
+          <strong>POSITIVE FEEDBACK</strong> after receiving the product
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>
