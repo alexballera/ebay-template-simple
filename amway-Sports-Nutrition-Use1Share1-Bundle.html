@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amway Sports Nutrition Use1Share1 Bundle</title>
+</head>
+
+<style>
+    .body,
+    nav,
+    ul,
+    li {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+        width: 100%;
+    }
+    
+    .body {
+        overflow-y: hidden;
+    }
+    
+    .main {
+        width: 100%;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    .color-cyan {
+        color: #ED174B;
+    }
+    
+    .color-red {
+        color: #ED174B;
+    }
+    
+    .color-blue {
+        color: #002F5F;
+    }
+    
+    .text-right {
+        text-align: right;
+    }
+    
+    quotes {
+        font-style: italic;
+    }
+    
+    quotes::after,
+    quotes::before {
+        content: '"';
+    }
+    
+    .header {
+        background-color: #ED174B;
+        color: white;
+        padding: 1rem;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .header h2 {
+        font-size: 1.5rem;
+        display: none;
+    }
+    
+    .navbar {
+        background-color: #002F5F;
+        display: none;
+    }
+    
+    .navbar ul {
+        list-style-type: none;
+        padding: 0;
+        width: 90%;
+    }
+    
+    .navbar ul li {
+        box-sizing: border-box;
+        display: inline;
+    }
+    
+    .navbar ul li a {
+        color: white;
+        border-right: 1px solid grey;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 1rem;
+        text-decoration: none;
+    }
+    
+    .navbar ul li a:hover {
+        color: lightgray;
+    }
+    
+    .header-bg {
+        background-color: darkgrey;
+        background-image: url(https://raw.githubusercontent.com/alexballera/imagenes/master/fitness-608037.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+    }
+    
+    .section-title {
+        background-color: #002F5F;
+        color: #E7F6F6;
+        padding: 1rem 2rem;
+    }
+    
+    .section-title h2 {
+        margin: 0;
+        text-transform: uppercase;
+    }
+    
+    .description {
+        background-color: white;
+        border: 1px solid lightgray;
+        margin-bottom: 1rem;
+        padding: 1rem 0;
+    }
+    
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .align-item-center {
+        align-items: center;
+    }
+    
+    .justify-content-center {
+        justify-content: center;
+    }
+    
+    .align-item-stretch {
+        align-items: stretch;
+    }
+    
+    .product-detail-image {
+        box-sizing: border-box;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .product-detail-image img {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        width: 100%;
+    }
+    
+    .product-detail-description {
+        background-color: #f4f4f4;
+        box-sizing: border-box;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .product-detail-title {
+        color: #ED174B;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .product-detail-table {
+        background-color: #e7f6f6;
+        box-sizing: border-box;
+        min-height: 150px;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .product-detail-table tr td {
+        font-size: .9rem;
+        line-height: 1.25rem;
+        padding-left: 1rem;
+    }
+    
+    .product-detail p,
+    .product-detail li {
+        /* color: darkgray; */
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        margin-bottom: 1rem;
+    }
+    
+    .product-detail ul,
+    .product-detail li {
+        width: 90%;
+    }
+    
+    .product-detail h3 {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+    }
+    
+    .product-detail-table tr td:first-child {
+        font-weight: 700;
+        min-width: 150px;
+    }
+    
+    .frequently-bought-togeter {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    
+    @media (max-width: 767px) {
+        .order-one {
+            order: 1;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .navbar,
+        .header h2 {
+            display: block;
+        }
+        .header h1,
+        .product-detail-title {
+            font-size: 1.8rem;
+        }
+        .description {
+            background-color: white;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .product-detail-image {
+            width: 50%;
+        }
+        .product-detail-description {
+            padding: 1rem 3rem;
+            width: 50%;
+        }
+        .product-detail p,
+        .product-detail li {
+            font-size: 1rem;
+        }
+        .product-detail ul,
+        .product-detail li {
+            width: 100%;
+        }
+        .product-detail-table {
+            width: 49.5%;
+        }
+        .product-detail-table:first-child {
+            margin-right: .5%;
+        }
+        .product-detail-table:last-child {
+            margin-left: .5%;
+        }
+        .terminos ul {
+            margin-left: 2rem;
+        }
+        .terminos ul,
+        .terminos ul li {
+            width: 100%;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .product-detail-image {
+            width: 30%;
+        }
+        .product-detail-description {
+            width: 70%;
+        }
+        .product-detail p,
+        .product-detail li {
+            font-size: 1.3rem;
+        }
+    }
+    
+    .product-detail-description-fullwidth {
+        width: 100%;
+    }
+    
+    .terminos {
+        background-color: #373737;
+        color: white;
+        padding: 1rem 2rem;
+    }
+    
+    .terminos .product-detail-title {
+        color: #E7F6F6;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .terminos ul {
+        color: #E7F6F6;
+        list-style-type: circle;
+    }
+    
+    .terminos ul li {
+        line-height: 1.5rem;
+    }
+    
+    .terminos ul,
+    .terminos ul li {
+        width: 90%;
+    }
+    
+    .footer {
+        background-color: #373737;
+    }
+    
+    .footer-item {
+        color: white;
+        box-sizing: border-box;
+    }
+    
+    .footer-item a {
+        color: white;
+        display: block;
+        font-size: 80%;
+        padding: .5rem;
+        text-decoration: none;
+    }
+    
+    .footer-item a:hover {
+        background-color: #626262;
+        color: #E7F6F6;
+    }
+    
+    .bgwhite {
+        background-color: white;
+    }
+</style>
+
+<body class="body">
+    <main class="main">
+        <header class="header">
+            <header class="header">
+                <hgroup>
+                    <h1>
+                        Amway
+                    </h1>
+                    <h2>
+                        XS™ Sports Nutrition Use1Share1 Bundle...
+                    </h2>
+                </hgroup>
+            </header>
+        </header>
+        <div class="header-bg"></div>
+
+        <section id="description">
+            <div class="section-title">
+                <h2>Description</h2>
+            </div>
+
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description product-detail-description-fullwidth">
+                        <h2 class="product-detail-title">
+                            Amway XS™ Sports Nutrition Use1Share1 Bundle<br> *** NEW *** SEALED BRAND NEW!
+                        </h2>
+                        <h3>Product Overview</h3>
+
+                        <p>
+                            <strong>Provides a broad sampling of XS™ Sports Nutrition products </strong> <br><br>
+                            <strong>XS™ Sports Protein Powder</strong> Designed for everyday athletes and those who want to get the most out of today, this bundle includes a solid range of products to Hydrate, Energize, and Recharge, along with an exclusive
+                            XS™ stainless steel, insulated water bottle and XS™ 2 in 1 shaker cup.
+                            <br>
+                        </p>
+                        <h3>The XS™ Sports Nutrition Bundle includes:</h3>
+                        <ul>
+                            <li>12 XS™ CocoWater Hydration Drink Mix Packets (6 Strawberry Watermelon and 6 Pineapple Coconut)</li>
+                            <li>12 XS™ Intense Pre-Workout Boost Stick Packs (Citrus Burst)</li>
+                            <li>12 XS™ Protein Crisps Bags (Barbeque)</li>
+                            <li>10 XS™ Energy Bars (5 Chocolate Chip and 5 Peanut Butter Crunch)</li>
+                            <li>12 XS™ Sports Protein Powder, Single-Serving Pouches (Chocolate Milkshake)</li>
+                            <li>10 XS™ Sports Protein Bars (5 Chocolate Peanut Butter and 5 Chocolate Berry Blast)</li>
+                        </ul>
+                        <h3>Benefits </h3>
+                        <p><strong>The XS™ Sports Nutrition Use1Share1 Bundle gives you:</strong></p>
+                        <ul>
+                            <li>A broad sampling of XS™ Sports Nutrition products.</li>
+                            <li>Individually packaged samples that are perfect for on the go and sharing with friends.</li>
+                            <li>XS™ logo items that help you create more awareness of the XS™ brand.</li>
+                        </ul>
+                        <h3>Ingredients</h3>
+                        <p><strong>XS™ CocoWater Hydration Drink Mix</strong></p>
+                        <p>
+                            SUCROSE, COCONUT WATER CONCENTRATE, TRIPOTASSIUM CITRATE MONOHYDRATE, NATURAL FLAVORS, CITRIC ACID, CALCIUM SILICATE (ANTI-CAKING AGENT), MALIC ACID, PURPLE CARROT (COLOR), REBAUDIOSIDE A (STEVIA EXTRACT).
+                        </p>
+                        <p><strong>XS™ Intense Pre-Workout Boost stick packs – Citrus Burst</strong></p>
+                        <p>BETA-ALANINE, MALTODEXTRIN, ISOMALTULOSE, DEXTROSE, WAXY MAIZE, CITRIC ACID, NATURAL FLAVORING, ENERGY BLEND (CAFFEINE [FROM GUARANA SEED EXTRACT AND COFFEE BEAN EXTRACT], ELEUTHERO ROOT, GINKGO LEAF, ASTRAGALUS ROOT, ASIAN GINSENG
+                            ROOT, SCHIZANDRA FRUIT AND SEED, SARGASSUM THALLUS, REISHI FRUIT, JUJUBE FRUIT, LYCIUM FRUIT, LUO HAN GUO FRUIT), MEDIUM CHAIN TRIGLYCERIDES (FROM COCONUT OIL). CONTAINS 2% OR LESS OF: SILICA, MALIC ACID, RHODIOLA ROOT EXTRACT,
+                            ASCORBIC ACID, PYRIDOXINE HYDROCHLORIDE, REB A (STEVIA), NIACIN (AS NICOTINIC ACID), CYANOCOBALAMIN, D-CALCIUM PANTOTHENATE, FOLIC ACID, THIAMINE MONONITRATE, RIBOFLAVIN.</p>
+                        <p><strong>XS™ Protein Crisps Bags – Barbeque</strong></p>
+                        <p>PEA PROTEIN ISOLATE, DEHYDRATED VEGETABLES (POTATO, TOMATO, ONION, GARLIC), POTATO STARCH, HIGH OLEIC SUNFLOWER OIL, SORBITOL, NATURAL FLAVORS, TORULA YEAST, CALCIUM CARBONATE, SALT, SODIUM DIACETATE, PAPRIKA, CITRIC ACID, YEAST
+                            EXTRACT, SPICE, POTASSIUM CHLORIDE, SODIUM GLUCOMATE, SILICON DIOXIDE (ANTI-CAKING AGENT).</p>
+                        <p><strong>XS™ Energy Bars - Chocolate Chip</strong></p>
+                        <p>ORGANIC BROWN RICE SYRUP, ORGANIC ROLLED OATS, SOY CRISPS (SOY PROTEIN ISOLATE, ORGANIC RICE FLOUR AND CALCIUM CARBONATE), ORGANIC CHOCOLATE CHIPS (ORGANIC CANE SUGAR, ORGANIC CHOCOLATE LIQUOR, ORGANIC COCOA BUTTER, SUNFLOWER LECITHIN,
+                            SALT, ORGANIC VANILLA EXTRACT), ORGANIC DATE PASTE, ORGANIC INVERT CANE SYRUP, ORGANIC SOY BUTTER (ORGANIC DRY ROASTED SOYBEANS, ORGANIC SOY OIL, SEA SALT), SOY PROTEIN ISOLATE, INULIN, PREBIOTIC SOLUBLE CORN FIBER, TAPIOCA
+                            SYRUP, ORGANIC SUNFLOWER OIL, NATURAL FLAVOR, ORGANIC AGAVE SYRUP, SEA SALT. <strong>CONTAINS SOY AND WHEAT.</strong> </p>
+                        <p><strong>XS™ Energy Bars – Peanut Butter Crunch</strong></p>
+                        <p>ORGANIC BROWN RICE SYRUP, ORGANIC PEANUT BUTTER (ROASTED PEANUTS), ORGANIC DATE PASTE, SOY CRISPS (SOY PROTEIN ISOLATE, RICE FLOUR, MALT EXTRACT), ORGANIC ROLLED OATS, ORGANIC INVERT CANE SYRUP, PEANUT FLOUR, ORGANIC PEANUTS, ORGANIC
+                            SOY BUTTER (ORGANIC DRY ROASTED SOYBEANS, ORGANIC SOY OIL, SEA SALT), SOY PROTEIN ISOLATE, PEANUT EXTRACT, PREBIOTIC SOLUBLE CORN FIBER, TAPIOCA SYRUP, ORGANIC SUNFLOWER OIL, ORGANIC AGAVE SYRUP, INULIN, SEA SALT. <strong>CONTAINS PEANUTS, SOY AND WHEAT</strong>.</p>
+                        <p><strong>XS™ Sports Protein Powder single-serving pouches – Chocolate Milkshake</strong></p>
+                        <p>WHEY PROTEIN CONCENTRATE (FROM MILK), MILK PROTEIN ISOLATE, FRUCTOSE, COCOA, GLYCINE, COCONUT OIL, CALCIUM CASEINATE (FROM MILK), NATURAL FLAVORS. CONTAINS 2% OR LESS OF: MICELLAR CASEIN (FROM MILK), WHEY PROTEIN HYDROLYSATE (FROM
+                            MILK), WHEY PROTEIN ISOLATE (FROM MILK), SODIUM CASEINATE (FROM MILK), BRANCHED CHAIN AMINO ACIDS (LEUCINE, ISOLEUCINE, VALINE), MALTODEXTRIN, MEDIUM CHAIN TRIGLYCERIDES, LECITHIN (SOY OR SUNFLOWER), PAPAIN, OLIGOFRUCTOSE,
+                            GUAR GUM, XANTHAN GUM, REB A (STEVIA), BROMELAIN, FRUCTOOLIGOSACCHARIDES, SALT, MONOGLYCERIDES, DIPOTASSIUM PHOSPHATE, SILICON DIOXIDE, PEA PROTEIN ISOLATE. <strong>CONTAINS SOY AND MILK</strong>.</p>
+                        <p><strong>XS™ Sports Protein Bars – Chocolate Peanut Butter</strong></p>
+                        <p>SUCROCHOCOLATE FLAVORED COATING (SUGAR, PALM KERNEL OIL, WHEY PROTEIN CONCENTRATE, COCOA POWDER, SOY LECITHIN [EMULSIFIER], VANILLA), XS™ PROTEIN BLEND (WHEY PROTEIN CONCENTRATE, WHEY PROTEIN ISOLATE, MILK PROTEIN CONCENTRATE,
+                            HYDROLYZED WHEY PROTEIN ISOLATE, CALCIUM CASEINATE), PEANUT BUTTER (PEANUTS, SE, PALM OIL, SALT, SEA SALT), GLYCERINE, GELATIN, WATER, WHEY CRISP (WHEY PROTEIN ISOLATE, WHEY PROTEIN CONCENTRATE, TAPIOCA STARCH, CALCIUM CARBONATE,
+                            SOY LECITHIN [PROCESSING AID]), PEANUT FLOUR, POWDERED SUGAR, MALTODEXTRIN, PEANUTS, PALM KERNEL OIL, SOY LECITHIN (EMULSIFIER), SALT, ALMONDS. <strong>CONTAINS PEANUTS, SOY, MILK AND ALMONDS</strong>.</p>
+                        <p><strong>XS™ Sports Protein Bars – Chocolate Berry Blast</strong></p>
+                        <p>CHOCOLATE FLAVORED COATING (SUGAR, PALM KERNEL OIL, WHEY PROTEIN CONCENTRATE, COCOA POWDER, SOY LECITHIN [AN EMULSIFIER], VANILLA), XS™ PROTEIN BLEND (WHEY PROTEIN CONCENTRATE, WHEY PROTEIN ISOLATE, MILK PROTEIN CONCENTRATE, HYDROLYZED
+                            WHEY PROTEIN ISOLATE, CALCIUM CASEINATE), GLYCERINE, CORN SYRUP, WHEY CRISP (WHEY PROTEIN ISOLATE, WHEY PROTEIN CONCENTRATE, TAPIOCA STARCH, CALCIUM CARBONATE, SOY LECITHIN [PROCESSING AID]), SWEETENED CONDENSED SKIM MILK (MILK
+                            SOLIDS, SUCROSE), WATER, GELATIN, SUGAR, ALMONDS, BLUEBERRIES (BLUEBERRIES, SUGAR, SUNFLOWER OIL), PALM KERNEL OIL, INVERT SYRUP, COCOA POWDER, CREAM POWDER, SOY LECITHIN (EMULSIFIER), NATURAL FLAVORS, SEA SALT, PEANUTS. <strong>CONTAINS PEANUTS, ALMONDS, MILK AND SOY</strong>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description bgwhite product-detail-description-fullwidth">
+                        <h2 class="product-detail-title">Frequently Bought Together</h2>
+                        <div class="imagenes frequently-bought-togeter">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110847-dv-r.jpg" alt="Amway Sports Nutrition Use1Share1 Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110815-dv-r.jpg" alt="Amway Sports Nutrition Use1Share1 Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110627-dv-r.jpg" alt="Amway Sports Nutrition Use1Share1 Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110628-dv-r.jpg" alt="Amway Sports Nutrition Use1Share1 Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110377-dv-r.jpg" alt="Amway Sports Nutrition Use1Share1 Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110385-dv-r.jpg" alt="Amway Sports Nutrition Use1Share1 Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110369-dv-r.jpg" alt="Amway Sports Nutrition Use1Share1 Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/101593-dv-r.jpg" alt="Amway Sports Nutrition Use1Share1 Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/107846-dv-r.jpg" alt="Amway Sports Nutrition Use1Share1 Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110374-dv-r.jpg" alt="Amway Sports Nutrition Use1Share1 Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110371-dv-r.jpg" alt="Amway Sports Nutrition Use1Share1 Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110379-dv-r.jpg" alt="Amway Sports Nutrition Use1Share1 Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/744352-dv-r.jpg" alt="Amway Sports Nutrition Use1Share1 Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110386-dv-r.jpg" alt="Amway Sports Nutrition Use1Share1 Bundle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="payment">
+            <div class="section-title">
+                <h2>Payment</h2>
+            </div>
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description order-one">
+                        <p class="text-right">
+                            <em class="color-cyan">
+                We accept PayPal Only. All major credit cards are accepted through secure payment processor PayPal.
+              </em>
+                        </p>
+                    </div>
+                    <div class="product-detail-image">
+                        <img src="https://raw.githubusercontent.com/alexballera/ebay-template/master/images/Rich-Dad-Cashflow-Quadrant-Guide-to-Financial-Freedom.png" alt="Herbalife Herbal Tea Concentrate">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="shipping">
+            <div class="section-title">
+                <h2>Shipping</h2>
+            </div>
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description product-detail-description-fullwidth">
+                        <h2 class="product-detail-title">PLEASE READ!!!</h2>
+                        <p>Feel Safe to Buy with us read our Feedback is our business!!!</p>
+                        <p>
+                            Shipping out in next business day if you choose on <strong>weekend</strong>
+                        </p>
+                        <p>
+                            <strong>Excludes:</strong> Alaska/Hawaii, APO/FPO, US Protectorates, South America, Puerto Rico, PO Box <strong class="color-cyan">ARE NOT AVAILABLE!!!!!</strong>
+                        </p>
+                        <p>
+                            It usually takes 2 - 3 days of handling time. For orders within the US it takes 5 - 7 business days maximum after handling.
+                        </p>
+                        <p>
+                            When can you expect your order? Allow at least 2 to 3 days for tracking number to post.
+                        </p>
+                        <p>
+                            When I know, you will know.
+                        </p>
+                        <p>
+                            If you want cancel order we can do only before shipping...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="terms" class="terminos">
+            <h2 class="product-detail-title">
+                Purchase Terms and Conditions
+            </h2>
+            <ul>
+                <li>
+                    Your order will be processed within 1 business day after receipt of cleared payment.
+                </li>
+                <li>
+                    We Only Provide Shipping to the 48 Contiguous United States.
+                </li>
+                <li>
+                    We are unable to ship PO Box.
+                </li>
+                <li>
+                    We do not combine shipping.
+                </li>
+                <li>
+                    30 days in order to get your money back or item exchange*, buyer pays return shipping.
+                </li>
+                <li>
+                    Buyers Pay for Return Shipping Cost.
+                </li>
+                <li>
+                    All emails will be answered within 1 business day. If you do not receive our reply, please kindly re-sent your e-mail, and we will reply to you as soon as possible.
+                </li>
+                <li>
+                    All items sold by us are being described to the best of our abilities, as accurate as possible, and with utmost conscientiousness on our part. However, to avoid any potential oversights, I respectfully request your assistance in helping us to make this
+                    a mutually satisfactory transaction by Thoroughly reviewing item description and photos, and asking all questions Prior To Bidding.
+                </li>
+                <li>
+                    Please Note that size and color representation are subject to manufacturing variance and may not be exact. Also note that monitor settings may vary from computer to computer and may distort actual colors.
+                </li>
+                <li>
+                    Before you report any problem to Ebay wait for our answer.
+                </li>
+                <li>
+                    If there is something let you unsatisfy, please do not leave negative or neutral feedback we will try best to solve your problem and ensure your requirement.
+                </li>
+                <li>
+                    Please leave
+                    <strong>POSITIVE FEEDBACK</strong> after receiving the product
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
