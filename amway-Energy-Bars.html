@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amway Sports Energy and Hydration Drink</title>
+</head>
+
+<style>
+    .body,
+    nav,
+    ul,
+    li {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+        width: 100%;
+    }
+    /* body {
+        overflow-y: hidden;
+    } */
+    
+    .main {
+        width: 100%;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    .color-cyan {
+        color: #ED174B;
+    }
+    
+    .color-red {
+        color: #ED174B;
+    }
+    
+    .color-blue {
+        color: #002F5F;
+    }
+    
+    .text-right {
+        text-align: right;
+    }
+    
+    quotes {
+        font-style: italic;
+    }
+    
+    quotes::after,
+    quotes::before {
+        content: '"';
+    }
+    
+    .header {
+        background-color: #ED174B;
+        color: white;
+        padding: 1rem;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .header h2 {
+        font-size: 1.5rem;
+        display: none;
+    }
+    
+    .navbar {
+        background-color: #002F5F;
+        display: none;
+    }
+    
+    .navbar ul {
+        list-style-type: none;
+        padding: 0;
+        width: 90%;
+    }
+    
+    .navbar ul li {
+        box-sizing: border-box;
+        display: inline;
+    }
+    
+    .navbar ul li a {
+        color: white;
+        border-right: 1px solid grey;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 1rem;
+        text-decoration: none;
+    }
+    
+    .navbar ul li a:hover {
+        color: lightgray;
+    }
+    
+    .header-bg {
+        background-color: darkgrey;
+        background-image: url(https://raw.githubusercontent.com/alexballera/imagenes/master/fitness-652255.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+    }
+    
+    .section-title {
+        background-color: #002F5F;
+        color: #E7F6F6;
+        padding: 1rem 2rem;
+    }
+    
+    .section-title h2 {
+        margin: 0;
+        text-transform: uppercase;
+    }
+    
+    .description {
+        background-color: white;
+        border: 1px solid lightgray;
+        margin-bottom: 1rem;
+        padding: 1rem 0;
+    }
+    
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .align-item-center {
+        align-items: center;
+    }
+    
+    .justify-content-center {
+        justify-content: center;
+    }
+    
+    .align-item-stretch {
+        align-items: stretch;
+    }
+    
+    .product-detail-image {
+        box-sizing: border-box;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .product-detail-image img {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        width: 100%;
+    }
+    
+    .product-detail-description {
+        background-color: #f4f4f4;
+        box-sizing: border-box;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .product-detail-title {
+        color: #ED174B;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .product-detail-table {
+        background-color: #e7f6f6;
+        box-sizing: border-box;
+        min-height: 150px;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .product-detail-table tr td {
+        font-size: .9rem;
+        line-height: 1.25rem;
+        padding-left: 1rem;
+    }
+    
+    .product-detail p,
+    .product-detail li {
+        /* color: darkgray; */
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        margin-bottom: 1rem;
+    }
+    
+    .product-detail ul,
+    .product-detail li {
+        width: 90%;
+    }
+    
+    .product-detail h3 {
+        font-size: 1.8rem;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+    
+    .product-detail h4 {
+        font-size: 1.2rem;
+    }
+    
+    .product-detail-table tr td:first-child {
+        font-weight: 700;
+        min-width: 150px;
+    }
+    
+    .frequently-bought-togeter {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    
+    @media (max-width: 767px) {
+        .order-one {
+            order: 1;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .navbar,
+        .header h2 {
+            display: block;
+        }
+        .header h1,
+        .product-detail-title {
+            font-size: 1.8rem;
+        }
+        .description {
+            background-color: white;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .product-detail-image {
+            width: 50%;
+        }
+        .product-detail-description {
+            padding: 1rem 3rem;
+            width: 50%;
+        }
+        .product-detail p,
+        .product-detail li {
+            font-size: 1rem;
+        }
+        .product-detail ul,
+        .product-detail li {
+            width: 100%;
+        }
+        .product-detail-table {
+            width: 49.5%;
+        }
+        .product-detail-table:first-child {
+            margin-right: .5%;
+        }
+        .product-detail-table:last-child {
+            margin-left: .5%;
+        }
+        .terminos ul {
+            margin-left: 2rem;
+        }
+        .terminos ul,
+        .terminos ul li {
+            width: 100%;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .product-detail-image {
+            width: 30%;
+        }
+        .product-detail-description {
+            width: 70%;
+        }
+        .product-detail p,
+        .product-detail li {
+            font-size: 1.3rem;
+        }
+    }
+    
+    .product-detail-description-fullwidth {
+        width: 100%;
+    }
+    
+    .terminos {
+        background-color: #373737;
+        color: white;
+        padding: 1rem 2rem;
+    }
+    
+    .terminos .product-detail-title {
+        color: #E7F6F6;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .terminos ul {
+        color: #E7F6F6;
+        list-style-type: circle;
+    }
+    
+    .terminos ul li {
+        line-height: 1.5rem;
+    }
+    
+    .terminos ul,
+    .terminos ul li {
+        width: 90%;
+    }
+    
+    .footer {
+        background-color: #373737;
+    }
+    
+    .footer-item {
+        color: white;
+        box-sizing: border-box;
+    }
+    
+    .footer-item a {
+        color: white;
+        display: block;
+        font-size: 80%;
+        padding: .5rem;
+        text-decoration: none;
+    }
+    
+    .footer-item a:hover {
+        background-color: #626262;
+        color: #E7F6F6;
+    }
+    
+    .bgwhite {
+        background-color: white;
+    }
+</style>
+
+<body class="body">
+    <main class="main">
+        <header class="header">
+            <header class="header">
+                <hgroup>
+                    <h1>
+                        Amway
+                    </h1>
+                    <h2>
+                        XS™ Sports Energy and Hydration Drink ...
+                    </h2>
+                </hgroup>
+            </header>
+        </header>
+        <div class="header-bg"></div>
+
+        <section id="description">
+            <div class="section-title">
+                <h2>Description</h2>
+            </div>
+
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description product-detail-description-fullwidth">
+                        <h2 class="product-detail-title">
+                            Amway XS® Juiced and Burn Variety Case<br> *** NEW *** SEALED BRAND NEW!
+                        </h2>
+                        <h3>Product Overview</h3>
+
+                        <p>
+                            <h4>XS™ Energy Bars - 12 Bars</h4>
+                            <strong>Flavors:</strong> Peanut Butter Crunch / Blueberry Crunch Bar
+                        </p>
+                        <p>
+                            <strong class="color-cyan">**PLEASE NOTIFY ASAP IN NEXT 5 MIN AFTER PURCHASE YOUR FLAVOR CHOICES SHAKE AND TEA**</strong>
+                            <br><br>
+                            <strong>IF DON'T NOTIFY WE SENDING BY DEFAULT PEANUT BUTTER CRUNCH</strong>
+                        </p>
+
+                        <p><strong>12 Bars</strong></p>
+                        <p>
+                            Sustain energy and fuel your muscle recovery and performance.* Made with 9 grams of protein and simple, non-GMO ingredients. Limited-edition flavor, available while supplies last.
+                        </p>
+                        <p>
+                            *This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.
+                        </p>
+
+                        <h3>Benefits</h3>
+
+                        <p>The XS® Juiced and Burn Variety Case contains:</p>
+                        <ul>
+                            <li>XS® Sparkling Juiced Energy Pink Grapefruit (2 cans)</li>
+                            <li>XS® Sparkling Juiced Energy Mango Pineapple Guava (2 cans)</li>
+                            <li>XS® Sparkling Juiced Energy Dragon Fruit (2 cans) </li>
+                            <li>XS® Caffeine-free Sparkling Juiced Energy Mango Pineapple Guava (2 cans)</li>
+                            <li>XS® Energy + Burn Strawberry (2 cans)</li>
+                            <li>XS® Energy + Burn Blood Orange (2 cans)</li>
+                        </ul>
+                        <p>The <strong>XS® Juiced and Burn Variety Case</strong> is perfect for people who want a powerful energy punch without added sugar, empty carbs, or excess calories. </p>
+                        <p>If this product is purchased in a state with a deposit law, the amount of deposit will be added to your cost.</p>
+
+
+                        <h3>Frequently Asked Questions</h3>
+                        <p><strong>Will the energy effects be decreased if taken daily?</strong> <br> <br> No.
+                        </p>
+                        <p><strong>Is it possible to overdose on B vitamins?</strong> <br> <br> B vitamins are part of the group called “water soluble” vitamins. Excessive amounts of water soluble vitamins are merely excreted through the urine.
+                        </p>
+                        <p><strong>How much caffeine is in XS® Energy Drinks?</strong> <br> <br> All 8.4-ounce XS® Energy Drinks, except the caffeine-free flavors, have up to 83mg of caffeine. This is equivalent to a small cup of coffee. The 12-ounce XS®
+                            Energy Drinks contain up to 125 mg of caffeine and are comparable to a 12 oz. cup of coffee.
+                        </p>
+                        <p><strong>Why are there 9 grams of sugar in XS® Sparkling Juiced Energy?</strong> <br> <br> The 9 grams of sugar come naturally from the 25% fruit juice.
+                        </p>
+                        <p><strong>How do XS® Energy Drinks taste so good with no sugar and very few calories?</strong> <br> <br> XS® drinks use a blend of sucralose, acesulfame potassium, and fruit essences to give the drinks their great flavor without
+                            sugar or empty calories.
+                        </p>
+                        <p><strong>Do XS® Energy Drinks contain gluten?</strong> <br> <br> No, XS® Energy Drinks are gluten free.
+                        </p>
+                        <p><strong>Do XS® Energy Drinks contain artificial colors? </strong> <br> <br> No, XS® Energy Drinks are free of artificial colors and use natural ingredients to obtain bright and vibrant color.
+                        </p>
+                        <p><strong>How much sugar is in XS® Energy Drinks?</strong> <br> <br> There is less than a half-calorie of sugar in most XS® Energy Drinks. Under FDA regulations, that qualifies as “no sugar.” For comparison, other 8.4-ounce energy
+                            drinks on the market today have over 100 calories from 27–30 grams of sugar. Many 12-ounce, non-diet soft drinks have 170 calories from 40 grams of sugar. And, some 5.5-ounce juice drinks have 80 calories from 20 grams of sugar.
+                        </p>
+                        <p><strong>Why is it important to NOT have sugar or carbohydrate calories in any drink?</strong> <br> <br> Calories from sugar and carbohydrates may increase fat deposits. Simple carbohydrates are also called high-glycemic (high-sugar)
+                            foods. High-glycemic foods cause your body to store calories as fat. Low-glycemic foods do not have the same effect to the same degree.
+                        </p>
+                        <p><strong>Are caffeine-free XS® Energy Drinks OK for pregnant women or children?</strong> <br> <br> XS® Energy Drinks are not recommended for children, or women who are pregnant or nursing. If you have additional questions, please
+                            consult with your physician.
+                        </p>
+
+                        <h3>More Information</h3>
+
+                        <p>
+                            <strong>Use Instructions::</strong>
+                            <ul>
+                                <li>Enjoy up to two XS® Energy products (including XS® Energy Drinks and XS® Sparkling Juiced Energy) daily to stay energized and focused.</li>
+                                <li>A 12-fl. oz. can of XS® Energy Drink contains 125 mg of caffeine, comparable to a 12 oz. cup of brewed coffee.</li>
+                                <li>An 8.4-fl. oz. can of XS® Energy Drink contain up to 83 mg of caffeine, comparable to an 8 oz. cup of brewed coffee.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description bgwhite product-detail-description-fullwidth">
+                        <h2 class="product-detail-title">Frequently Bought Together</h2>
+                        <div class="imagenes frequently-bought-togeter">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110847-dv-r.jpg" alt="Amway Sports Energy and Hydration Drink">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110815-dv-r.jpg" alt="Amway Sports Energy and Hydration Drink">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110627-dv-r.jpg" alt="Amway Sports Energy and Hydration Drink">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110628-dv-r.jpg" alt="Amway Sports Energy and Hydration Drink">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110377-dv-r.jpg" alt="Amway Sports Energy and Hydration Drink">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110385-dv-r.jpg" alt="Amway Sports Energy and Hydration Drink">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110369-dv-r.jpg" alt="Amway Sports Energy and Hydration Drink">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/101593-dv-r.jpg" alt="Amway Sports Energy and Hydration Drink">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/107846-dv-r.jpg" alt="Amway Sports Energy and Hydration Drink">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110374-dv-r.jpg" alt="Amway Sports Energy and Hydration Drink">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110371-dv-r.jpg" alt="Amway Sports Energy and Hydration Drink">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110379-dv-r.jpg" alt="Amway Sports Energy and Hydration Drink">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/744352-dv-r.jpg" alt="Amway Sports Energy and Hydration Drink">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110386-dv-r.jpg" alt="Amway Sports Energy and Hydration Drink">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="payment">
+            <div class="section-title">
+                <h2>Payment</h2>
+            </div>
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description order-one">
+                        <p class="text-right">
+                            <em class="color-cyan">
+                We accept PayPal Only. All major credit cards are accepted through secure payment processor PayPal.
+              </em>
+                        </p>
+                    </div>
+                    <div class="product-detail-image">
+                        <img src="https://raw.githubusercontent.com/alexballera/ebay-template/master/images/Rich-Dad-Cashflow-Quadrant-Guide-to-Financial-Freedom.png" alt="Herbalife Herbal Tea Concentrate">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="shipping">
+            <div class="section-title">
+                <h2>Shipping</h2>
+            </div>
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description product-detail-description-fullwidth">
+                        <h2 class="product-detail-title">PLEASE READ!!!</h2>
+                        <p>Feel Safe to Buy with us read our Feedback is our business!!!</p>
+                        <p>
+                            Shipping out in next business day if you choose on <strong>weekend</strong>
+                        </p>
+                        <p>
+                            <strong>Excludes:</strong> Alaska/Hawaii, APO/FPO, US Protectorates, South America, Puerto Rico, PO Box <strong class="color-cyan">ARE NOT AVAILABLE!!!!!</strong>
+                        </p>
+                        <p>
+                            It usually takes 2 - 3 days of handling time. For orders within the US it takes 5 - 7 business days maximum after handling.
+                        </p>
+                        <p>
+                            When can you expect your order? Allow at least 2 to 3 days for tracking number to post.
+                        </p>
+                        <p>
+                            When I know, you will know.
+                        </p>
+                        <p>
+                            If you want cancel order we can do only before shipping...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="terms" class="terminos">
+            <h2 class="product-detail-title">
+                Purchase Terms and Conditions
+            </h2>
+            <ul>
+                <li>
+                    Your order will be processed within 1 business day after receipt of cleared payment.
+                </li>
+                <li>
+                    We Only Provide Shipping to the 48 Contiguous United States.
+                </li>
+                <li>
+                    We are unable to ship PO Box.
+                </li>
+                <li>
+                    We do not combine shipping.
+                </li>
+                <li>
+                    30 days in order to get your money back or item exchange*, buyer pays return shipping.
+                </li>
+                <li>
+                    Buyers Pay for Return Shipping Cost.
+                </li>
+                <li>
+                    All emails will be answered within 1 business day. If you do not receive our reply, please kindly re-sent your e-mail, and we will reply to you as soon as possible.
+                </li>
+                <li>
+                    All items sold by us are being described to the best of our abilities, as accurate as possible, and with utmost conscientiousness on our part. However, to avoid any potential oversights, I respectfully request your assistance in helping us to make this
+                    a mutually satisfactory transaction by Thoroughly reviewing item description and photos, and asking all questions Prior To Bidding.
+                </li>
+                <li>
+                    Please Note that size and color representation are subject to manufacturing variance and may not be exact. Also note that monitor settings may vary from computer to computer and may distort actual colors.
+                </li>
+                <li>
+                    Before you report any problem to Ebay wait for our answer.
+                </li>
+                <li>
+                    If there is something let you unsatisfy, please do not leave negative or neutral feedback we will try best to solve your problem and ensure your requirement.
+                </li>
+                <li>
+                    Please leave
+                    <strong>POSITIVE FEEDBACK</strong> after receiving the product
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
