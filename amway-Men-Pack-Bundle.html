@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amway Nutrilite Men’s Pack Bundle</title>
+</head>
+
+<style>
+    .body,
+    nav,
+    ul,
+    li {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+        width: 100%;
+    }
+    
+    body {
+        overflow-y: hidden;
+    }
+    
+    .main {
+        width: 100%;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    .color-cyan {
+        color: #ED174B;
+    }
+    
+    .color-red {
+        color: #ED174B;
+    }
+    
+    .color-blue {
+        color: #002F5F;
+    }
+    
+    .text-right {
+        text-align: right;
+    }
+    
+    quotes {
+        font-style: italic;
+    }
+    
+    quotes::after,
+    quotes::before {
+        content: '"';
+    }
+    
+    .header {
+        background-color: #ED174B;
+        color: white;
+        padding: 1rem;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .header h2 {
+        font-size: 1.5rem;
+        display: none;
+    }
+    
+    .navbar {
+        background-color: #002F5F;
+        display: none;
+    }
+    
+    .navbar ul {
+        list-style-type: none;
+        padding: 0;
+        width: 90%;
+    }
+    
+    .navbar ul li {
+        box-sizing: border-box;
+        display: inline;
+    }
+    
+    .navbar ul li a {
+        color: white;
+        border-right: 1px solid grey;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 1rem;
+        text-decoration: none;
+    }
+    
+    .navbar ul li a:hover {
+        color: lightgray;
+    }
+    
+    .header-bg {
+        background-color: transparent;
+        background-image: url(https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/285560-dv-z.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 600px;
+    }
+    
+    .section-title {
+        background-color: #002F5F;
+        color: #E7F6F6;
+        padding: 1rem 2rem;
+    }
+    
+    .section-title h2 {
+        margin: 0;
+        text-transform: uppercase;
+    }
+    
+    .description {
+        background-color: white;
+        border: 1px solid lightgray;
+        margin-bottom: 1rem;
+        padding: 1rem 0;
+    }
+    
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .align-item-center {
+        align-items: center;
+    }
+    
+    .justify-content-center {
+        justify-content: center;
+    }
+    
+    .align-item-stretch {
+        align-items: stretch;
+    }
+    
+    .product-detail-image {
+        box-sizing: border-box;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .product-detail-image img {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        width: 100%;
+    }
+    
+    .product-detail-description {
+        background-color: #f4f4f4;
+        box-sizing: border-box;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .product-detail-title {
+        color: #ED174B;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .product-detail-table {
+        background-color: #e7f6f6;
+        box-sizing: border-box;
+        min-height: 150px;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .product-detail-table tr td {
+        font-size: .9rem;
+        line-height: 1.25rem;
+        padding-left: 1rem;
+    }
+    
+    .product-detail p,
+    .product-detail li {
+        /* color: darkgray; */
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        margin-bottom: 1rem;
+    }
+    
+    .product-detail ul,
+    .product-detail li {
+        width: 90%;
+    }
+    
+    .product-detail h3 {
+        font-size: 1.8rem;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+    
+    .product-detail h4 {
+        font-size: 1.5rem;
+    }
+    
+    .product-detail-table tr td:first-child {
+        font-weight: 700;
+        min-width: 150px;
+    }
+    
+    .frequently-bought-togeter {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    
+    @media (max-width: 767px) {
+        .order-one {
+            order: 1;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .navbar,
+        .header h2 {
+            display: block;
+        }
+        .header h1,
+        .product-detail-title {
+            font-size: 1.8rem;
+        }
+        .description {
+            background-color: white;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .product-detail-image {
+            width: 50%;
+        }
+        .product-detail-description {
+            padding: 1rem 3rem;
+            width: 50%;
+        }
+        .product-detail p,
+        .product-detail li {
+            font-size: 1rem;
+        }
+        .product-detail ul,
+        .product-detail li {
+            width: 100%;
+        }
+        .product-detail-table {
+            width: 49.5%;
+        }
+        .product-detail-table:first-child {
+            margin-right: .5%;
+        }
+        .product-detail-table:last-child {
+            margin-left: .5%;
+        }
+        .terminos ul {
+            margin-left: 2rem;
+        }
+        .terminos ul,
+        .terminos ul li {
+            width: 100%;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .product-detail-image {
+            width: 30%;
+        }
+        .product-detail-description {
+            width: 70%;
+        }
+        .product-detail p,
+        .product-detail li {
+            font-size: 1.3rem;
+        }
+    }
+    
+    .product-detail-description-fullwidth {
+        width: 100%;
+    }
+    
+    .terminos {
+        background-color: #373737;
+        color: white;
+        padding: 1rem 2rem;
+    }
+    
+    .terminos .product-detail-title {
+        color: #E7F6F6;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .terminos ul {
+        color: #E7F6F6;
+        list-style-type: circle;
+    }
+    
+    .terminos ul li {
+        line-height: 1.5rem;
+    }
+    
+    .terminos ul,
+    .terminos ul li {
+        width: 90%;
+    }
+    
+    .footer {
+        background-color: #373737;
+    }
+    
+    .footer-item {
+        color: white;
+        box-sizing: border-box;
+    }
+    
+    .footer-item a {
+        color: white;
+        display: block;
+        font-size: 80%;
+        padding: .5rem;
+        text-decoration: none;
+    }
+    
+    .footer-item a:hover {
+        background-color: #626262;
+        color: #E7F6F6;
+    }
+    
+    .bgwhite {
+        background-color: white;
+    }
+</style>
+
+<body class="body">
+    <main class="main">
+        <header class="header">
+            <header class="header">
+                <hgroup>
+                    <h1>
+                        Amway
+                    </h1>
+                    <h2>
+                        Nutrilite Men’s Pack Bundle ...
+                    </h2>
+                </hgroup>
+            </header>
+        </header>
+        <div class="header-bg"></div>
+
+        <section id="description">
+            <div class="section-title">
+                <h2>Description</h2>
+            </div>
+
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description product-detail-description-fullwidth">
+                        <h2 class="product-detail-title">
+                            Amway Nutrilite Men’s Pack Bundle<br> *** NEW *** SEALED BRAND NEW!
+                        </h2>
+
+                        <div>
+                            <h3>Product Overview</h3>
+
+                            <!-- <p>
+                              <p><strong>60 tablets</strong></p>
+                              <p><strong>Flavors:</strong></p>
+                              <ul>
+                                  <li>Strawberry</li>
+                                  <li>Fruit Punch</li>
+                              </ul>
+                          </p> -->
+                            <!-- <p>
+                              <strong class="color-cyan">**PLEASE NOTIFY ASAP IN NEXT 5 MIN AFTER PURCHASE YOUR FLAVOR CHOICES**</strong>
+                              <br><br>
+                              <strong style="text-transform:uppercase">IF DON'T NOTIFY WE SENDING BY DEFAULT Strawberry</strong>
+                          </p> -->
+
+                            <div>
+                                <h4>
+                                    Fuel and nutrients for a man’s healthy lifestyle
+                                </h4>
+                                <p>
+                                    The Men’s Pack Bundle combines three essentials help maintain an active and healthy lifestyle: vitamin and mineral supplements to meet men’s nutritional needs, dual-action vitamin B to fight fatigue† and tasty meal bars for a filling and nutritious meal
+                                    replacement or snack.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4>Nutrilite™ Men’s Pack</h4>
+                                <p><strong>Convenient daily vitamin and mineral nutrition for men</strong></p>
+                                <p>
+                                    Take one packet every day to support vitamin and mineral nutritional needs specific to men. Support a strong heart, clear mind and a healthy immune system.† Each packet contains:
+                                </p>
+                                <ul>
+                                    <li>Daily Multivitamin and Multimineral. 24 essential vitamins and minerals with exclusive plant concentrates.</li>
+                                    <li>Vitamin C Extended Release. Support your immune system.†</li>
+                                    <li>Multi Carotene. Support healthy night vision.†</li>
+                                    <li>Balanced Health Omega. Support brain and eye health.†</li>
+                                </ul>
+                                <p>
+                                    Usage Rate: 30 Use(s) per Box <br><br> Recommended use: 1 Use(s) per day
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4>
+                                    Nutrilite™ Vitamin B Dual-Action
+                                </h4>
+                                <p><strong>
+                                B vitamins help fight fatigue† 
+                            </strong></p>
+                                <p>
+                                    Fight fatigue before it hits with all eight essential B vitamins packed into a single dual-action, bi-layer tablet. Just one tablet delivers up to eight hours† of energy support.
+                                </p>
+                                <p>
+                                    Recommended use: 1 Use(s) per day
+                                </p>
+
+                                <p>
+                                    BodyKey™ Caramel Peanut Butter Meal Bar - 14 Bars Rich, Creamy BodyKey by Nutrilite™ Caramel Peanut Butter Meal Bar
+                                </p>
+                                <ul>
+                                    <li>Filling and delicious, combines savory peanut butter and caramel to indulge your taste buds.</li>
+                                    <li>Well-balanced, convenient meal for your on-the-go lifestyle.</li>
+                                    <li>Great-tasting meal bar without empty calories.</li>
+                                    <li>May also be eaten between meals as a tasty treat.</li>
+                                </ul>
+                                <p style="font-size:90%">
+                                    †This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3>Description</h3>
+                            <ul>
+                                <li>Nutrilite™ Men’s Pack. One packet per day provides the vitamins and minerals essential to men’s health, with exclusive plant concentrates in a balanced formula.</li>
+                                <li>Nutrilite™ Vitamin B Dual-Action. A dual-action tablet containing all eight B vitamins to help you maintain energy levels throughout the day.</li>
+                                <li>BodyKey by Nutrilite™ Caramel Peanut Butter Meal Bar is a better choice because: Non-GMO soy protein isolate. Contains 17 vitamins and minerals. Gluten free. No artificial colors, flavors, or preservatives. Processed on
+                                    equipment that also processes peanuts, tree nuts, soybeans, eggs, and wheat.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Benefits
+                            </h3>
+                            <h4>
+                                The Nutrilite™ Men’s Pack includes:
+                            </h4>
+                            <div>
+                                <p><strong>
+                                Daily Multivitamin and Multimineral: 24 Essential Vitamins and Minerals with Exclusive Plant Concentrates
+                            </strong></p>
+                                <p>
+                                    A powerful and convenient way to help fill the vitamin and mineral nutritional gaps in your daily diet.
+                                </p>
+                                <ul>
+                                    <li>100% or more Daily Value of 20 essential vitamins and minerals.</li>
+                                    <li>518 mg of exclusive Nutrilite™ whole plant concentrates for phytonutrient benefits beyond vitamins and minerals.
+                                    </li>
+                                    <li>Antioxidant protection against free radicals.</li>
+                                    <li>Nutrilock™ coating for easy-to-swallow tablets.</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p><strong>
+                                Vitamin C Extended Release: Support your immune system
+                            </strong></p>
+                                <p>
+                                    This extended-release, plant-based vitamin C provides 500 mg for all-day immune support with one-tablet convenience.†
+                                </p>
+                                <ul>
+                                    <li>Created from acerola cherries, one of nature’s most concentrated forms of vitamin C, grown on our own certified organic farms.</li>
+                                    <li>Includes ascorbic acid and phytonutrients found in lemons, oranges and grapefruit that provide antioxidant protection from free radicals.†</li>
+                                    <li>Easy-to-swallow, slow-release tablet is ideal for those with a sensitive stomach.</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p><strong>
+                                Multi Carotene: Support healthy night vision
+                            </strong></p>
+                                <p>
+                                    This natural formula contains vitamins and phytonutrients to help your eyes adjust to light.† Carotene, lutein and zeaxanthin help protect eyes from free radicals.†
+                                </p>
+                                <ul>
+                                    <li>Incorporates a mix of natural carotenoids similar to those found in fruits and vegetables, instead of isolated beta carotene found in many supplements.</li>
+                                    <li>The body converts the beta carotene in this supplement to vitamin A, as needed.</li>
+                                    <li>Contains naturally sourced carotenoid compounds from algae, palm fruit oil and marigold flowers</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p><strong>
+                                Balanced Health Omega: Support brain and eye health
+                            </strong></p>
+                                <p>
+                                    Get the equivalent DHA and EPA omega 3s found in 15.75 ounces, or three servings, of ocean fish.
+                                </p>
+                                <ul>
+                                    <li>Helps support memory, learning and concentration with DHA1 omega 3s.†</li>
+                                    <li>Supports nerves and helps keep blood flowing and joints moving with EPA2 omega 3s.†</li>
+                                    <li>Supports optimal heart health.†</li>
+                                    <li>Reduces the fishy aftertaste common in fish oil supplements through our proprietary six-step process.</li>
+                                </ul>
+                                <ol>
+                                    <li>Docosahexaenoic acid.</li>
+                                    <li>Eicosapentaenoic acid.</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <p><strong>
+                                Nutrilite™ Vitamin B Dual-Action 
+                            </strong></p>
+                                <p><strong>
+                                Description
+                            </strong></p>
+                                <p>
+                                    Nutrilite™ Vitamin B Dual-Action is packed with all eight essential B vitamins in a bi-layer tablet, so your body gets the vitamin B it needs, when it needs it. First, one side delivers a quick and complete release of two B vitamins to help you start
+                                    strong. Then, the other side releases six more B vitamins steadily for eight hours.†
+                                </p>
+                                <p><strong>
+                                Benefits
+                            </strong></p>
+                                <ul>
+                                    <li>Nutrilite™ Vitamin B Dual-Action contains natural spirulina grown on a Nutricert™ certified aqua farm.</li>
+                                    <li>B vitamins are used by the body to produce energy and help fight fatigue.†</li>
+                                    <li>Provides eight hours† of energy support in one easy-to-swallow tablet.</li>
+                                    <li>Contributes to energy-yielding metabolism.</li>
+                                    <li>Does not contain caffeine.</li>
+                                    <li>Gentle on the stomach.</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p>
+                                    <strong>BodyKey by Nutrilite™ Caramel Peanut Butter Meal Bar</strong> is a better choice because:
+                                </p>
+                                <ul>
+                                    <li>Non-GMO soy protein isolate.</li>
+                                    <li>Contains 17 vitamins and minerals.</li>
+                                    <li>Gluten free.</li>
+                                    <li>No artificial colors, flavors, or preservatives.</li>
+                                    <li>Processed on equipment that also processes peanuts, tree nuts, soybeans, eggs, and wheat.</li>
+                                </ul>
+                                <p style="font-size:90%">
+                                    †This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description bgwhite product-detail-description-fullwidth">
+                        <h2 class="product-detail-title">Frequently Bought Together</h2>
+                        <div class="imagenes frequently-bought-togeter">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110847-dv-r.jpg" alt="Amway Nutrilite Men’s Pack Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110815-dv-r.jpg" alt="Amway Nutrilite Men’s Pack Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110627-dv-r.jpg" alt="Amway Nutrilite Men’s Pack Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110628-dv-r.jpg" alt="Amway Nutrilite Men’s Pack Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110377-dv-r.jpg" alt="Amway Nutrilite Men’s Pack Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110385-dv-r.jpg" alt="Amway Nutrilite Men’s Pack Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110369-dv-r.jpg" alt="Amway Nutrilite Men’s Pack Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/101593-dv-r.jpg" alt="Amway Nutrilite Men’s Pack Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/107846-dv-r.jpg" alt="Amway Nutrilite Men’s Pack Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110374-dv-r.jpg" alt="Amway Nutrilite Men’s Pack Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110371-dv-r.jpg" alt="Amway Nutrilite Men’s Pack Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110379-dv-r.jpg" alt="Amway Nutrilite Men’s Pack Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/744352-dv-r.jpg" alt="Amway Nutrilite Men’s Pack Bundle">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110386-dv-r.jpg" alt="Amway Nutrilite Men’s Pack Bundle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="payment">
+            <div class="section-title">
+                <h2>Payment</h2>
+            </div>
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description order-one">
+                        <p class="text-right">
+                            <em class="color-cyan">
+                We accept PayPal Only. All major credit cards are accepted through secure payment processor PayPal.
+              </em>
+                        </p>
+                    </div>
+                    <div class="product-detail-image">
+                        <img src="https://raw.githubusercontent.com/alexballera/ebay-template/master/images/Rich-Dad-Cashflow-Quadrant-Guide-to-Financial-Freedom.png" alt="Herbalife Herbal Tea Concentrate">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="shipping">
+            <div class="section-title">
+                <h2>Shipping</h2>
+            </div>
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description product-detail-description-fullwidth">
+                        <h2 class="product-detail-title">PLEASE READ!!!</h2>
+                        <p>Feel Safe to Buy with us read our Feedback is our business!!!</p>
+                        <p>
+                            Shipping out in next business day if you choose on <strong>weekend</strong>
+                        </p>
+                        <p>
+                            <strong>Excludes:</strong> Alaska/Hawaii, APO/FPO, US Protectorates, South America, Puerto Rico, PO Box <strong class="color-cyan">ARE NOT AVAILABLE!!!!!</strong>
+                        </p>
+                        <p>
+                            It usually takes 2 - 3 days of handling time. For orders within the US it takes 5 - 7 business days maximum after handling.
+                        </p>
+                        <p>
+                            When can you expect your order? Allow at least 2 to 3 days for tracking number to post.
+                        </p>
+                        <p>
+                            When I know, you will know.
+                        </p>
+                        <p>
+                            If you want cancel order we can do only before shipping...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="terms" class="terminos">
+            <h2 class="product-detail-title">
+                Purchase Terms and Conditions
+            </h2>
+            <ul>
+                <li>
+                    Your order will be processed within 1 business day after receipt of cleared payment.
+                </li>
+                <li>
+                    We Only Provide Shipping to the 48 Contiguous United States.
+                </li>
+                <li>
+                    We are unable to ship PO Box.
+                </li>
+                <li>
+                    We do not combine shipping.
+                </li>
+                <li>
+                    30 days in order to get your money back or item exchange*, buyer pays return shipping.
+                </li>
+                <li>
+                    Buyers Pay for Return Shipping Cost.
+                </li>
+                <li>
+                    All emails will be answered within 1 business day. If you do not receive our reply, please kindly re-sent your e-mail, and we will reply to you as soon as possible.
+                </li>
+                <li>
+                    All items sold by us are being described to the best of our abilities, as accurate as possible, and with utmost conscientiousness on our part. However, to avoid any potential oversights, I respectfully request your assistance in helping us to make this
+                    a mutually satisfactory transaction by Thoroughly reviewing item description and photos, and asking all questions Prior To Bidding.
+                </li>
+                <li>
+                    Please Note that size and color representation are subject to manufacturing variance and may not be exact. Also note that monitor settings may vary from computer to computer and may distort actual colors.
+                </li>
+                <li>
+                    Before you report any problem to Ebay wait for our answer.
+                </li>
+                <li>
+                    If there is something let you unsatisfy, please do not leave negative or neutral feedback we will try best to solve your problem and ensure your requirement.
+                </li>
+                <li>
+                    Please leave
+                    <strong>POSITIVE FEEDBACK</strong> after receiving the product
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
