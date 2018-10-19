@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amway Nutrilite Balanced Health Omega</title>
+</head>
+
+<style>
+    .body,
+    nav,
+    ul,
+    li {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+        width: 100%;
+    }
+    
+    body {
+        overflow-y: hidden;
+    }
+    
+    .main {
+        width: 100%;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    .color-cyan {
+        color: #ED174B;
+    }
+    
+    .color-red {
+        color: #ED174B;
+    }
+    
+    .color-blue {
+        color: #002F5F;
+    }
+    
+    .text-right {
+        text-align: right;
+    }
+    
+    quotes {
+        font-style: italic;
+    }
+    
+    quotes::after,
+    quotes::before {
+        content: '"';
+    }
+    
+    .header {
+        background-color: #ED174B;
+        color: white;
+        padding: 1rem;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .header h2 {
+        font-size: 1.5rem;
+        display: none;
+    }
+    
+    .navbar {
+        background-color: #002F5F;
+        display: none;
+    }
+    
+    .navbar ul {
+        list-style-type: none;
+        padding: 0;
+        width: 90%;
+    }
+    
+    .navbar ul li {
+        box-sizing: border-box;
+        display: inline;
+    }
+    
+    .navbar ul li a {
+        color: white;
+        border-right: 1px solid grey;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 1rem;
+        text-decoration: none;
+    }
+    
+    .navbar ul li a:hover {
+        color: lightgray;
+    }
+    
+    .header-bg {
+        background-color: transparent;
+        background-image: url(https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/A8914-dv-z.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 600px;
+    }
+    
+    .section-title {
+        background-color: #002F5F;
+        color: #E7F6F6;
+        padding: 1rem 2rem;
+    }
+    
+    .section-title h2 {
+        margin: 0;
+        text-transform: uppercase;
+    }
+    
+    .description {
+        background-color: white;
+        border: 1px solid lightgray;
+        margin-bottom: 1rem;
+        padding: 1rem 0;
+    }
+    
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .align-item-center {
+        align-items: center;
+    }
+    
+    .justify-content-center {
+        justify-content: center;
+    }
+    
+    .align-item-stretch {
+        align-items: stretch;
+    }
+    
+    .product-detail-image {
+        box-sizing: border-box;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .product-detail-image img {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        width: 100%;
+    }
+    
+    .product-detail-description {
+        background-color: #f4f4f4;
+        box-sizing: border-box;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .product-detail-title {
+        color: #ED174B;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .product-detail-table {
+        background-color: #e7f6f6;
+        box-sizing: border-box;
+        min-height: 150px;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .product-detail-table tr td {
+        font-size: .9rem;
+        line-height: 1.25rem;
+        padding-left: 1rem;
+    }
+    
+    .product-detail p,
+    .product-detail li {
+        /* color: darkgray; */
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        margin-bottom: 1rem;
+    }
+    
+    .product-detail ul,
+    .product-detail li {
+        width: 90%;
+    }
+    
+    .product-detail h3 {
+        font-size: 1.8rem;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+    
+    .product-detail h4 {
+        font-size: 1.5rem;
+    }
+    
+    .product-detail-table tr td:first-child {
+        font-weight: 700;
+        min-width: 150px;
+    }
+    
+    .frequently-bought-togeter {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    
+    @media (max-width: 767px) {
+        .order-one {
+            order: 1;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .navbar,
+        .header h2 {
+            display: block;
+        }
+        .header h1,
+        .product-detail-title {
+            font-size: 1.8rem;
+        }
+        .description {
+            background-color: white;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .product-detail-image {
+            width: 50%;
+        }
+        .product-detail-description {
+            padding: 1rem 3rem;
+            width: 50%;
+        }
+        .product-detail p,
+        .product-detail li {
+            font-size: 1rem;
+        }
+        .product-detail ul,
+        .product-detail li {
+            width: 100%;
+        }
+        .product-detail-table {
+            width: 49.5%;
+        }
+        .product-detail-table:first-child {
+            margin-right: .5%;
+        }
+        .product-detail-table:last-child {
+            margin-left: .5%;
+        }
+        .terminos ul {
+            margin-left: 2rem;
+        }
+        .terminos ul,
+        .terminos ul li {
+            width: 100%;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .product-detail-image {
+            width: 30%;
+        }
+        .product-detail-description {
+            width: 70%;
+        }
+        .product-detail p,
+        .product-detail li {
+            font-size: 1.3rem;
+        }
+    }
+    
+    .product-detail-description-fullwidth {
+        width: 100%;
+    }
+    
+    .terminos {
+        background-color: #373737;
+        color: white;
+        padding: 1rem 2rem;
+    }
+    
+    .terminos .product-detail-title {
+        color: #E7F6F6;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .terminos ul {
+        color: #E7F6F6;
+        list-style-type: circle;
+    }
+    
+    .terminos ul li {
+        line-height: 1.5rem;
+    }
+    
+    .terminos ul,
+    .terminos ul li {
+        width: 90%;
+    }
+    
+    .footer {
+        background-color: #373737;
+    }
+    
+    .footer-item {
+        color: white;
+        box-sizing: border-box;
+    }
+    
+    .footer-item a {
+        color: white;
+        display: block;
+        font-size: 80%;
+        padding: .5rem;
+        text-decoration: none;
+    }
+    
+    .footer-item a:hover {
+        background-color: #626262;
+        color: #E7F6F6;
+    }
+    
+    .bgwhite {
+        background-color: white;
+    }
+</style>
+
+<body class="body">
+    <main class="main">
+        <header class="header">
+            <header class="header">
+                <hgroup>
+                    <h1>
+                        Amway
+                    </h1>
+                    <h2>
+                        Nutrilite Balanced Health Omega ...
+                    </h2>
+                </hgroup>
+            </header>
+        </header>
+        <div class="header-bg"></div>
+
+        <section id="description">
+            <div class="section-title">
+                <h2>Description</h2>
+            </div>
+
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description product-detail-description-fullwidth">
+                        <h2 class="product-detail-title">
+                            Amway Nutrilite Balanced Health Omega<br> *** NEW *** SEALED BRAND NEW!
+                        </h2>
+
+                        <div>
+                            <h3>Product Overview</h3>
+
+                            <p>
+                                <p><strong>90 softgels</strong></p>
+                                <!-- <p><strong>Flavors:</strong></p>
+                                <ul>
+                                    <li>Strawberry</li>
+                                    <li>Fruit Punch</li>
+                                </ul> -->
+                            </p>
+                            <!-- <p>
+                              <strong class="color-cyan">**PLEASE NOTIFY ASAP IN NEXT 5 MIN AFTER PURCHASE YOUR FLAVOR CHOICES**</strong>
+                              <br><br>
+                              <strong style="text-transform:uppercase">IF DON'T NOTIFY WE SENDING BY DEFAULT Strawberry</strong>
+                          </p> -->
+
+                            <div>
+                                <h4>
+                                    Support brain and eye health
+                                </h4>
+                                <p>
+                                    Get the equivalent DHA and EPA omega 3s found in 15.75 ounces, or three servings, of ocean fish.
+                                </p>
+                                <ul>
+                                    <li>
+                                        Helps support memory, learning, and concentration with DHA1 omega 3s.†
+                                    </li>
+                                    <li>
+                                        Supports nerves and helps keep blood flowing and joints moving with EPA2 omega 3s.†
+                                    </li>
+                                    <li>
+                                        Supports optimal heart health.†
+                                    </li>
+                                    <li>
+                                        Reduces the fishy aftertaste common in fish oil supplements through our proprietary six-step process.
+                                    </li>
+                                </ul>
+                                <p>
+                                    1Docosahexaenoic acid. <br><br> 2Eicosapentaenoic acid.
+                                </p>
+                                <p style="font-size:95%">
+                                    †This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.
+                                </p>
+                                <p>
+                                    Usage Rate: 90 Use(s) per Bottle <br><br> Recommended use: 3 Use(s) per day
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3>Description</h3>
+                            <p>
+                                Nutrilite® Balanced Health Omega provides a concentrated blend of two key omega-3 fatty acids. Taken daily throughout the week, the combination provides the same amount of DHA and EPA as 15.75 ounces, or three servings, of ocean fish.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Benefits
+                            </h3>
+                            <div>
+                                <ul>
+                                    <li>
+                                        Support for normal blood triglycerides and healthy blood flow
+                                    </li>
+                                    <li>
+                                        Help maintain joint mobility for an active lifestyle
+                                    </li>
+                                    <li>
+                                        May promote normal brain function and concentration
+                                    </li>
+                                    <li>
+                                        A special, six-step process reduces unpleasant side effects common to competitors' Omega-3 products
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Product Advantage
+                            </h3>
+                            <p>
+                                Nutrilite® Balanced Health Omega provides a concentrated blend of two key omega-3 fatty acids – EPA and DHA. Taken daily throughout the week, the combination provides the same amount of DHA and EPA as 15.75 ounces, or three servings, of ocean fish.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Advisories
+                            </h3>
+                            <p>
+                                Children under 12 years of age, pregnant women or nursing mothers, anyone with a medical condition, or anyone on blood-thinning medication should consult with a physician before using this product. Keep out of reach of children.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Frequently Asked Questions
+                            </h3>
+                            <div>
+                                <p><strong>
+                                What are omega-3 fatty acids, and why do I need them?
+                              </strong></p>
+                                <p>
+                                    Omega-3 fatty acids are long-chain polyunsaturated fatty acids. They are building blocks of every living cell in the human body and required for optimal function of the cells. If you are not currently consuming at least two meals of fatty fish per week,
+                                    you may benefit from a supplement rich in EPA and DHA
+                                </p>
+                            </div>
+                            <div>
+                                <p><strong>
+                                I have heard that fat is bad for you. How can omega-3 fatty acids be good for you?
+                              </strong></p>
+                                <p>
+                                    There are good and not-so-good fats. If a label indicates hydrogenated or partially hydrogenated oils, that ingredient is an unsaturated fat that has undergone a chemical process called hydrogenation to turn it into saturated fat and trans fat. These
+                                    hydrogenated fats are most often found in packaged foods such as pastries, cookies, and margarine.
+                                </p>
+                                <p>
+                                    Saturated fats are found in animal-based foods like meat, butter, and cheese. Saturated fats are not "bad" for you but a high intake of saturated fats as compared to poly- and monounsaturated fats is associated with an increased risk of some diseases.
+                                </p>
+                                <p>
+                                    But some "good fats" like omega-3 fatty acids contribute to health and normal cell development. They're building blocks of every living cell in your body. A cell membrane made with building blocks that come primarily from saturated fat has a different
+                                    structure and is less fluid than one that incorporates more omega-3 fatty acids. This loss of fluidity makes it difficult for the cell to carry out its normal functions and increases the cell's susceptibility to injury
+                                    and death.
+                                </p>
+                                <p>
+                                    Omega-3 fatty acids are abundant in ocean fish, but many people in North America don't eat a lot of fish and may need more omega-3 fatty acids than their present diets provide.
+                                </p>
+                            </div>
+                            <div>
+                                <p><strong>
+                                Are there any adverse drug interactions with omega 3s? 
+                              </strong></p>
+                                <p>
+                                    Omega 3s from fish oil like those in Nutrilite® Balanced Health Omega supplements have been shown to be safe if your total dietary daily intake (including food) does not exceed 3 grams. Daily intake of dietary supplements of omega 3 should not exceed
+                                    2 grams. Generally speaking, if you have no difficulties eating ocean fish, supplementation with omega 3 from fish oil should present no adverse effects at levels of 2 grams or less.
+                                </p>
+                                <p>
+                                    Certain medications may interact with omega-3 fatty acids. These drug interactions include aspirin, anticoagulants, Warfarin (coumadin), and other medications that alter blood coagulation. If you are taking any of these medications, please consult your
+                                    physician before adding an omega-3 supplement to your diet. It is always important to tell your pharmacist or health care professional that you are taking any supplement, including those made from concentrated fish
+                                    oil. And if you notice any changes in your physical health while taking the supplements, you should also contact your health care provider. This is especially important for children under 12 years of age, pregnant or
+                                    nursing women, or anyone with a medical condition.
+                                </p>
+                            </div>
+                            <div>
+                                <p><strong>
+                                What is the difference between EPA and DHA?
+                              </strong></p>
+                                <p>
+                                    Omega-3 fatty acids are important to every cell in your body and must be obtained from the diet for good health. Our bodies use omega 3s to form the outer cell structure. EPA (eicosapentaenoic acid) and DHA (docosahexaenoic acid) are two of the most important
+                                    omega 3s.
+                                </p>
+                                <p>
+                                    Research suggests that EPA benefits the heart and circulatory system by promoting normal lipid levels and blood flow. EPA also plays a role in the natural movement of joints.
+                                </p>
+                                <p>
+                                    Evidence shows DHA is an important building block of the brain, nerves, and eyes. DHA is the most highly unsaturated fatty acid found in nature. DHA supports normal mental function, optimal memory, focus, and learning. In fetuses and infants, DHA is critical
+                                    for brain and vision development.
+                                </p>
+                                <p>
+                                    The average American diet contains less than 200 milligrams of the important omega 3s EPA and DHA. Japan, England, and several European countries have set Recommended Daily Allowances for omega 3s, but there are none in the U.S. yet.
+                                </p>
+                            </div>
+                            <div>
+                                <p><strong>
+                                I take a multivitamin every day. Do I need an omega-3 or glucosamine supplement as well?
+                              </strong></p>
+                                <p>
+                                    Multivitamins provide nutritional insurance to help you and your family fill the nutritional gaps between what you actually eat and what you should eat. However, most multivitamins do not contain any omega-3 fatty acids, and many people in North America
+                                    are not getting enough omega 3s. If you are not eating ocean fish at least twice a week, you may benefit from omega-3 supplements. Most multivitamins don't contain any glucosamine either, and if you are concerned about
+                                    your joint health, you may benefit from a glucosamine supplement.
+                                </p>
+                            </div>
+                            <div>
+                                <p><strong>
+                                Do I still have to eat fish if I am taking a Nutrilite® omega-3 supplement?
+                              </strong></p>
+                                <p>
+                                    It is always a good idea to eat whole foods rich in omega-3 fatty acids, and ocean fish is the best source. But if you don't eat ocean fish at least twice a week, Nutrilite® omega-3 supplements can help you get the important EPA and DHA that might be
+                                    missing from your diet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description bgwhite product-detail-description-fullwidth">
+                        <h2 class="product-detail-title">Frequently Bought Together</h2>
+                        <div class="imagenes frequently-bought-togeter">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110847-dv-r.jpg" alt="Amway Nutrilite Balanced Health Omega">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110815-dv-r.jpg" alt="Amway Nutrilite Balanced Health Omega">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110627-dv-r.jpg" alt="Amway Nutrilite Balanced Health Omega">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110628-dv-r.jpg" alt="Amway Nutrilite Balanced Health Omega">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110377-dv-r.jpg" alt="Amway Nutrilite Balanced Health Omega">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110385-dv-r.jpg" alt="Amway Nutrilite Balanced Health Omega">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110369-dv-r.jpg" alt="Amway Nutrilite Balanced Health Omega">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/101593-dv-r.jpg" alt="Amway Nutrilite Balanced Health Omega">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/107846-dv-r.jpg" alt="Amway Nutrilite Balanced Health Omega">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110374-dv-r.jpg" alt="Amway Nutrilite Balanced Health Omega">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110371-dv-r.jpg" alt="Amway Nutrilite Balanced Health Omega">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110379-dv-r.jpg" alt="Amway Nutrilite Balanced Health Omega">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/744352-dv-r.jpg" alt="Amway Nutrilite Balanced Health Omega">
+                            <img src="https://www.amway.com/lcl/AmwayImages/AmwayOrderableItem/110386-dv-r.jpg" alt="Amway Nutrilite Balanced Health Omega">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="payment">
+            <div class="section-title">
+                <h2>Payment</h2>
+            </div>
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description order-one">
+                        <p class="text-right">
+                            <em class="color-cyan">
+                We accept PayPal Only. All major credit cards are accepted through secure payment processor PayPal.
+              </em>
+                        </p>
+                    </div>
+                    <div class="product-detail-image">
+                        <img src="https://raw.githubusercontent.com/alexballera/ebay-template/master/images/Rich-Dad-Cashflow-Quadrant-Guide-to-Financial-Freedom.png" alt="Herbalife Herbal Tea Concentrate">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="shipping">
+            <div class="section-title">
+                <h2>Shipping</h2>
+            </div>
+            <div class="description product-detail">
+                <div class="container align-item-center">
+                    <div class="product-detail-description product-detail-description-fullwidth">
+                        <h2 class="product-detail-title">PLEASE READ!!!</h2>
+                        <p>Feel Safe to Buy with us read our Feedback is our business!!!</p>
+                        <p>
+                            Shipping out in next business day if you choose on <strong>weekend</strong>
+                        </p>
+                        <p>
+                            <strong>Excludes:</strong> Alaska/Hawaii, APO/FPO, US Protectorates, South America, Puerto Rico, PO Box <strong class="color-cyan">ARE NOT AVAILABLE!!!!!</strong>
+                        </p>
+                        <p>
+                            It usually takes 2 - 3 days of handling time. For orders within the US it takes 5 - 7 business days maximum after handling.
+                        </p>
+                        <p>
+                            When can you expect your order? Allow at least 2 to 3 days for tracking number to post.
+                        </p>
+                        <p>
+                            When I know, you will know.
+                        </p>
+                        <p>
+                            If you want cancel order we can do only before shipping...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="terms" class="terminos">
+            <h2 class="product-detail-title">
+                Purchase Terms and Conditions
+            </h2>
+            <ul>
+                <li>
+                    Your order will be processed within 1 business day after receipt of cleared payment.
+                </li>
+                <li>
+                    We Only Provide Shipping to the 48 Contiguous United States.
+                </li>
+                <li>
+                    We are unable to ship PO Box.
+                </li>
+                <li>
+                    We do not combine shipping.
+                </li>
+                <li>
+                    30 days in order to get your money back or item exchange*, buyer pays return shipping.
+                </li>
+                <li>
+                    Buyers Pay for Return Shipping Cost.
+                </li>
+                <li>
+                    All emails will be answered within 1 business day. If you do not receive our reply, please kindly re-sent your e-mail, and we will reply to you as soon as possible.
+                </li>
+                <li>
+                    All items sold by us are being described to the best of our abilities, as accurate as possible, and with utmost conscientiousness on our part. However, to avoid any potential oversights, I respectfully request your assistance in helping us to make this
+                    a mutually satisfactory transaction by Thoroughly reviewing item description and photos, and asking all questions Prior To Bidding.
+                </li>
+                <li>
+                    Please Note that size and color representation are subject to manufacturing variance and may not be exact. Also note that monitor settings may vary from computer to computer and may distort actual colors.
+                </li>
+                <li>
+                    Before you report any problem to Ebay wait for our answer.
+                </li>
+                <li>
+                    If there is something let you unsatisfy, please do not leave negative or neutral feedback we will try best to solve your problem and ensure your requirement.
+                </li>
+                <li>
+                    Please leave
+                    <strong>POSITIVE FEEDBACK</strong> after receiving the product
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
